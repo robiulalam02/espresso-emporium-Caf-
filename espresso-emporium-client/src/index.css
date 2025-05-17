@@ -16,12 +16,12 @@
   --color-base-300: #1B1A1A;
 }
 
-* {
-  font-family: "Rancho", cursive;
+body {
+  font-family: "Raleway", sans-serif;
 }
 
-.raleway{
-  font-family: "Raleway", sans-serif;
+.rancho{
+  font-family: "Rancho", cursive;
 }
 
 button{

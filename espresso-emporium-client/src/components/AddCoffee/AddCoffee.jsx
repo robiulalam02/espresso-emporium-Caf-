@@ -1,8 +1,10 @@
 import React from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
+import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 
 const AddCoffee = () => {
+    const navigate = useNavigate();
 
     const handleAddCoffee = e => {
         e.preventDefault();
@@ -35,11 +37,11 @@ const AddCoffee = () => {
 
     return (
         <div className='max-w-screen-xl mx-auto my-10'>
-            <button className='flex items-center gap-2 text-2xl text-primary text-shadow-black text-shadow-xs'><FiArrowLeft /> Back to Home</button>
+            <button onClick={()=>navigate('/')} className='flex items-center gap-2 text-2xl text-primary text-shadow-black text-shadow-xs rancho'><FiArrowLeft /> Back to Home</button>
 
             <div className='mt-10 bg-[#F4F3F0] p-14 text-center'>
-                <h1 className='text-primary text-4xl mb-5'>Add New Coffee</h1>
-                <p className='mx-40 raleway'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+                <h1 className='text-primary text-4xl mb-5 rancho'>Add New Coffee</h1>
+                <p className='mx-40'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
 
                 <form className='mt-8' onSubmit={handleAddCoffee}>
 
@@ -57,8 +59,8 @@ const AddCoffee = () => {
                             <input className='bg-white h-12 p-4 w-full raleway placeholder:text-sm' type="text" name='supplier' placeholder='Enter coffee supplier' />
                         </div>
                         <div className='flex flex-col items-start gap-2'>
-                            <label className='raleway font-semibold' htmlFor="">Taste</label>
-                            <input className='bg-white h-12 p-4 w-full raleway placeholder:text-sm' type="text" name='taste' placeholder='Enter coffee taste' />
+                            <label className='raleway font-semibold' htmlFor="">Price</label>
+                            <input className='bg-white h-12 p-4 w-full raleway placeholder:text-sm' type="text" name='price' placeholder='Enter coffee price' />
                         </div>
                         <div className='flex flex-col items-start gap-2'>
                             <label className='raleway font-semibold' htmlFor="">Category</label>
@@ -71,11 +73,11 @@ const AddCoffee = () => {
                     </div>
 
                     <div className='flex flex-col items-start gap-2 mt-5'>
-                        <label className='raleway font-semibold' htmlFor="">Details</label>
-                        <input className='bg-white h-12 p-4 w-full raleway placeholder:text-sm' type="text" name='image' placeholder='Enter coffee details' />
+                        <label className='raleway font-semibold' htmlFor="">Image URL</label>
+                        <input className='bg-white h-12 p-4 w-full raleway placeholder:text-sm' type="text" name='image' placeholder='Coffee image URL' />
                     </div>
 
-                    <button className='bg-secondary w-full mt-8 py-3 text-primary text-xl' type="submit">Add Coffee</button>
+                    <button className='bg-secondary rancho w-full mt-8 py-3 text-primary text-xl' type="submit">Add Coffee</button>
                 </form>
             </div>
         </div>
